@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Kumar - Python Developer & Data Science Enthusiast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        .navbar {
+            background-color: var(--primary);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            color: white;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+        
+        .skill-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .badge-custom {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: var(--secondary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.2rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--secondary);
+            border: 4px solid white;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+        
+        .social-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--secondary);
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sahil Kumar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <img src="{{ url_for('static', filename='data/image.jpg') }}" alt="Sahil Kumar" class="profile-img mb-4">
+            <h1 class="display-4 fw-bold mb-3">Sahil Kumar</h1>
+            <p class="lead mb-4">Python Developer & Data Science Enthusiast</p>
+            <p class="mb-4">Hi, I'm Sahil, passionate programmer from Delhi. I enjoy solving real-world problems using Python, Machine Learning, and Web Development.</p>
+            <a href="#projects" class="btn btn-light btn-lg rounded-pill px-4 me-2">View My Work</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4">Contact Me</a>
+            <a href="{{ url_for('static', filename='data/resume.pdf') }}" download class="btn btn-light btn-lg rounded-pill px-4 me-2">
+                        <i class="bi bi-download me-1"></i>Download Resume
+                    </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Personal Details</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>From:</strong> Delhi , India</li>
+                        <li class="mb-2"><strong>Interests:</strong> Programming, Data Science, AI, Web Development, Public Speaking, Fitness</li>
+                        <li class="mb-2"><strong>Strengths:</strong> Time Management, Problem Solving, Presentation Skills</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h4>My Journey</h4>
+                    <p>I'm a passionate developer who started coding at a young age. My journey in programming began with Python, and I quickly developed an interest in Data Science and Machine Learning.</p>
+                    <p>I believe in continuous learning and constantly challenge myself with new projects and technologies. My goal is to become a proficient Data Scientist and use my skills to solve real-world problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-code-slash display-4 mb-3" style="color: var(--secondary);"></i>
+                            <h3>Programming</h3>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <span class="badge bg-primary m-1">Python</span>
+                                <span class="badge bg-primary m-1">SQL</span>
+                                <span class="badge bg-primary m-1">PHP</span>
+                                <span class="badge bg-primary m-1">JavaScript</span>
+                                <span class="badge bg-primary m-1">HTML</span>
+                                <span class="badge bg-primary m-1">CSS</span>
+                                <span class="badge bg-primary m-1">Flask</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-gear-fill display-4 mb-3" style="color: var(--secondary);"></i>
+                            <h3>Frameworks & Libraries</h3>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <span class="badge bg-success m-1">Pandas</span>
+                                <span class="badge bg-success m-1">NumPy</span>
+                                <span class="badge bg-success m-1">Matplotlib</span>
+                                <span class="badge bg-success m-1">Scikit-learn</span>
+                                <span class="badge bg-success m-1">Flask</span>
+                                <span class="badge bg-success m-1">Tkinter</span>
+                                <span class="badge bg-success m-1">Bootstrap</span>
+                                <span class="badge bg-success m-1">Seaborn</span>
+                                <span class="badge bg-success m-1">Tensorflow</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-tools display-4 mb-3" style="color: var(--secondary);"></i>
+                            <h3>Tools & Specializations</h3>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                <span class="badge bg-info m-1">Git</span>
+                                <span class="badge bg-info m-1">MySQL</span>
+                                <span class="badge bg-info m-1">Power BI</span>
+                                <span class="badge bg-info m-1">Jupyter</span>
+                                <span class="badge bg-info m-1">Data Cleaning</span>
+                                <span class="badge bg-info m-1">ML Models</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Updated</span>
+                            <h3 class="card-title">CleanSheet – Excel Data Cleaner</h3>
+                            <p class="card-text">Python + Pandas + Tkinter app to clean messy Excel data. Automates removal of duplicates, missing values, and formatting issues.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Pandas</span>
+                                <span class="badge bg-secondary">Tkinter</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">GitHub Repository</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Updated</span>
+                            <h3 class="card-title">House Price Prediction</h3>
+                            <p class="card-text">Machine Learning project using Linear Regression to predict house prices based on multiple factors like location, size, and amenities.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Scikit-learn</span>
+                                <span class="badge bg-secondary">Linear Regression</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Updated</span>
+                            <h3 class="card-title">Business Profit Prediction</h3>
+                            <p class="card-text">ML project to predict business profit based on investment in R&D, marketing, and administration using Multiple Linear Regression.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">ML</span>
+                                <span class="badge bg-secondary">Flask</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Updated</span>
+                            <h3 class="card-title">ML Showcase Web App</h3>
+                            <p class="card-text">Flask-based app showcasing Regression, Classification, and Clustering models. Allows training & predictions through user input.</p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">Flask</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
+                                <span class="badge bg-secondary">ML Models</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Class 12 </h4>
+                            <p>Subjects: Physics, Computer Science , Chemistry , Maths, Phsical Education </p>
+                            <p>Focus on Data Science & AI through self-learning and projects alongside formal education.</p>
+                        </div>
+                         <div class="timeline-item">
+                            <h4>BCA</h4>
+                            <p>Currently pursuing Bachelor of Computer Applications (BCA).</p>
+                            <p>Focus on programming, web development, and data science through coursework and personal projects.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h4>Self-Taught Programmer</h4>
+                            <p>Developed skills in Python, Machine Learning, and Web Development through online resources and practical projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <i class="bi bi-trophy display-4 mb-3" style="color: var(--accent);"></i>
+                            <h3>Project Development</h3>
+                            <p>Built multiple end-to-end projects at age 18, demonstrating advanced technical skills and dedication.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <i class="bi bi-lightbulb display-4 mb-3" style="color: var(--accent);"></i>
+                            <h3>Technical Expertise</h3>
+                            <p>Strong knowledge in Machine Learning & Python libraries with practical implementation experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <i class="bi bi-mic display-4 mb-3" style="color: var(--accent);"></i>
+                            <h3>Communication Skills</h3>
+                            <p>Experience in public speaking & presentation, able to explain complex technical concepts clearly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-5">
+                                <h3>Let's Connect!</h3>
+                                <p class="text-muted">Feel free to reach out for collaborations or just to say hello</p>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-6 text-center mb-3">
+                                    <i class="bi bi-envelope contact-icon"></i>
+                                    <span>sahilkumar1851320@gmail.com</span>
+                                </div>
+                                <div class="col-md-6 text-center mb-3">
+                                    <i class="bi bi-geo-alt contact-icon"></i>
+                                    <span> Delhi, India</span>
+                                </div>
+                            </div>
+                            <div class="text-center mb-4">
+                                <a href="https://github.com/ProgrammerSahilG" class="social-icon"><i class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/sahilkumardata/" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-4">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 Sahil Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
