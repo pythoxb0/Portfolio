@@ -7,410 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --accent-color: #9ae48b;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            scroll-behavior: smooth;
-            line-height: 1.6;
-        }
-        
-        .navbar {
-            background-color: var(--primary);
-            padding: 15px 0;
-        }
-        
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-        
-        /* Hero Section Styles */
-        .hero {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-            color: white;
-            text-align: center;
-            padding: 150px 0 100px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: white;
-            animation: fadeInDown 1s ease;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            animation: fadeInUp 1s ease 0.5s both;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            animation: fadeIn 1s ease 1s both;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        .btn:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-accent {
-            background-color: var(--primary-color);
-        }
-
-        .btn-accent:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--secondary);
-        }
-        
-        .section-title {
-            position: relative;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary);
-        }
-        
-        .skill-card {
-            transition: transform 0.3s ease;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            height: 100%;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .project-card {
-            transition: transform 0.3s ease;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            height: 100%;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .badge-custom {
-            background-color: var(--secondary);
-            color: white;
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 3rem;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 0;
-            height: 100%;
-            width: 3px;
-            background: var(--secondary);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2.5rem;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -3.2rem;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--secondary);
-            border: 4px solid white;
-        }
-        
-        .contact-icon {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            margin-right: 10px;
-        }
-        
-        .social-icon {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-right: 15px;
-            transition: color 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            color: var(--secondary);
-        }
-        
-        footer {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        /* Certificate Section */
-        .certificate-section {
-            background-color: var(--light);
-            padding: 80px 0;
-        }
-        
-        .certificate-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .certificate-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .certificate-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .certificate-content {
-            padding: 20px;
-        }
-        
-        /* Map Section */
-        .map-section {
-            padding: 80px 0;
-        }
-        
-        .map-container {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            height: 400px;
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 80px 0;
-            }
-            
-            .profile-img {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .display-4 {
-                font-size: 2.5rem;
-            }
-            
-            .timeline::before {
-                left: 10px;
-            }
-            
-            .timeline-item::before {
-                left: -2.5rem;
-            }
-            
-            .section-title::after {
-                width: 60px;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero-section {
-                padding: 60px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .display-4 {
-                font-size: 2rem;
-            }
-            
-            .btn-lg {
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
-            }
-            
-            .timeline {
-                padding-left: 2rem;
-            }
-            
-            .timeline-item::before {
-                left: -2.2rem;
-                width: 16px;
-                height: 16px;
-            }
-        }
-        
-        /* Toast notification for form submission */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-        
-        .toast.show {
-            opacity: 1;
-        }
-
-        .certificate-card {
-  background: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.certificate-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.certificate-pdf {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -444,6 +41,11 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
+                <div class="ms-3">
+                    <button id="theme-toggle" class="btn btn-outline-light btn-sm">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -456,7 +58,11 @@
                 <p>Passionate about creating innovative solutions and machine learning applications</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn">Get In Touch</a>
-                    <a href="resume.pdf"  target="_blank" class="btn btn-accent download-resume">Download Resume</a>
+                    <a href="resume.pdf" target="_blank" class="btn btn-accent download-resume">Download Resume</a>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll Down</span>
+                    <i class="bi bi-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -549,287 +155,316 @@
     </section>
 
     <!-- Projects Section -->
-  <section id="projects" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="row g-4">
-
-            <!-- Expense Tracker -->
-            <div class="col-md-6">
-                <div class="card project-card h-100">
-                    <div class="card-body p-4">
-                        <span class="badge bg-success float-end">Updated</span>
-                        <h3 class="card-title">Expense Tracker</h3>
-                        <p class="card-text">
-                            A Flask-based web app to track your daily expenses. 
-                            Users can add, view, and manage their income and expenses efficiently.
-                        </p>
-                        <div class="mb-2">
-                            <span class="badge bg-secondary">Python</span>
-                            <span class="badge bg-secondary">Flask</span>
-                            <span class="badge bg-secondary">SQLite</span>
-                        </div>
-                        <a href="https://github.com/pythoxb0/Expense-tracker-" target="_blank" class="btn btn-outline-primary">View Project</a>
-                    </div>
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <!-- Project Filter -->
+            <div class="text-center mb-4">
+                <div class="btn-group" role="group" aria-label="Project filter">
+                    <button type="button" class="btn btn-outline-primary active" data-filter="all">All</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="web">Web Apps</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="ml">Machine Learning</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="data">Data Science</button>
                 </div>
             </div>
-
-            <!-- CleanSheet -->
-            <div class="col-md-6">
-                <div class="card project-card h-100">
-                    <div class="card-body p-4">
-                        <span class="badge bg-success float-end">Updated</span>
-                        <h3 class="card-title">CleanSheet – Excel Data Cleaner</h3>
-                        <p class="card-text">
-                            A Flask-based web app to clean messy Excel data. 
-                            Automates removal of duplicates, missing values, formatting issues, 
-                            and provides a secure login system for users.
-                        </p>
-                        <div class="mb-2">
-                            <span class="badge bg-secondary">Python</span>
-                            <span class="badge bg-secondary">Pandas</span>
-                            <span class="badge bg-secondary">Flask</span>
-                            <span class="badge bg-secondary">Authentication</span>
+            
+            <div class="row g-4 project-container">
+                <!-- Expense Tracker -->
+                <div class="col-md-6 project-item" data-category="web">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Updated</span>
+                            <h3 class="card-title">Expense Tracker</h3>
+                            <p class="card-text">
+                                A Flask-based web app to track your daily expenses. 
+                                Users can add, view, and manage their income and expenses efficiently.
+                            </p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Flask</span>
+                                <span class="badge bg-secondary">SQLite</span>
+                            </div>
+                            <a href="https://github.com/pythoxb0/Expense-tracker-" target="_blank" class="btn btn-outline-primary">View Project</a>
                         </div>
-                        <a href="https://github.com/pythoxb0/Cleansheet" target="_blank" class="btn btn-outline-primary">View Project</a>
                     </div>
                 </div>
-            </div>
-
-            <!-- ERP System -->
-            <div class="col-md-6">
-                <div class="card project-card h-100">
-                    <div class="card-body p-4">
-                        <span class="badge bg-success float-end">Active</span>
-                        <h3 class="card-title">ERP System</h3>
-                        <p class="card-text">
-                            Flask-based ERP system with modules for Sales, Customers, Inventory, and Revenue tracking. 
-                            Supports customer management, sales transactions, product stock updates, and business insights.
-                        </p>
-                        <div class="mb-2">
-                            <span class="badge bg-secondary">Flask</span>
-                            <span class="badge bg-secondary">SQLAlchemy</span>
-                            <span class="badge bg-secondary">Bootstrap</span>
-                        </div>
-                        <a href="https://github.com/pythoxb0/ERP-SYSTEM-" target="_blank" class="btn btn-outline-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- House Price Prediction -->
-            <div class="col-md-6">
-                <div class="card project-card h-100">
-                    <div class="card-body p-4">
-                        <span class="badge bg-success float-end">Completed</span>
-                        <h3 class="card-title">House Price Prediction</h3>
-                        <p class="card-text">
-                            Machine Learning project using Linear Regression to predict house prices 
-                            based on multiple factors like location, size, and amenities.
-                        </p>
-                        <div class="mb-2">
-                            <span class="badge bg-secondary">Python</span>
-                            <span class="badge bg-secondary">Scikit-learn</span>
-                            <span class="badge bg-secondary">Linear Regression</span>
-                        </div>
-                        <a href="" target="_blank" class="btn btn-outline-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Business Profit Prediction -->
-            <div class="col-md-6">
-                <div class="card project-card h-100">
-                    <div class="card-body p-4">
-                        <span class="badge bg-success float-end">Updated</span>
-                        <h3 class="card-title">Business Profit Prediction</h3>
-                        <p class="card-text">
-                            ML project to predict business profit based on investment in R&D, 
-                            marketing, and administration using Multiple Linear Regression.
-                        </p>
-                        <div class="mb-2">
-                            <span class="badge bg-secondary">Python</span>
-                            <span class="badge bg-secondary">ML</span>
-                            <span class="badge bg-secondary">Flask</span>
-                        </div>
-                        <a href="https://github.com/pythoxb0/Business-profit-prediction-" target="_blank" class="btn btn-outline-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ML Showcase -->
-            <div class="col-md-6">
-                <div class="card project-card h-100">
-                    <div class="card-body p-4">
-                        <span class="badge bg-success float-end">Updated</span>
-                        <h3 class="card-title">ML Showcase Web App</h3>
-                        <p class="card-text">
-                            Flask-based app showcasing Regression, Classification, and Clustering models. 
-                            Allows training & predictions through user input.
-                        </p>
-                        <div class="mb-2">
-                            <span class="badge bg-secondary">Flask</span>
-                            <span class="badge bg-secondary">Bootstrap</span>
-                            <span class="badge bg-secondary">ML Models</span>
-                        </div>
-                        <a href="https://github.com/pythoxb0/Machine-learning" target="_blank" class="btn btn-outline-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Certificate Section -->
-<section id="certificates" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-title">Certifications</h2>
-        <div class="row">
-            <!-- AI & Coding Workshop Certificate -->
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="certificate-card shadow-lg p-3 rounded h-100">
-                    <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0">AI & Coding Workshop</h4>
-                        <span class="badge bg-success">STEMpedia</span>
-                    </div>
-                    <div class="certificate-preview mb-3">
-                        <div class="bg-light d-flex align-items-center justify-content-center" 
-                             style="height: 200px; border-radius: 5px; overflow: hidden; cursor: pointer;" 
-                             onclick="openImageModal('Screenshot_2022_0313_134831.jpg')">
-                            <div class="text-center p-3">
-                                <i class="fas fa-certificate text-warning" style="font-size: 3rem;"></i>
-                                <p class="mt-2">AI & Coding Workshop Participation Certificate</p>
-                                <small class="text-muted">Click to view</small>
+                <!-- Iris Flower Classification API -->
+                <div class="col-md-6 project-item" data-category="ml" >
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Live</span>
+                            <h3 class="card-title">Iris Flower Classification API</h3>
+                            <p class="card-text">
+                                A machine learning REST API for iris flower species classification. 
+                                Deployed with a beautiful frontend interface for real-time predictions 
+                                based on sepal and petal measurements.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-primary">Flask</span>
+                                <span class="badge bg-primary">Scikit-learn</span>
+                                <span class="badge bg-primary">Machine Learning</span>
+                                <span class="badge bg-primary">REST API</span>
+                                <span class="badge bg-primary">Render</span>
+                            </div>
+                            <div class="project-features mb-3">
+                                <small class="text-muted">
+                                    <strong>Features:</strong> Real-time predictions • RESTful API • Beautiful UI • Model deployment
+                                </small>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <a href="https://iris-api-oxrk.onrender.com/" target="_blank" class="btn btn-success">
+                                    <i class="fas fa-external-link-alt me-1"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/pythoxb0/iris-api" target="_blank" class="btn btn-outline-primary">
+                                    <i class="fab fa-github me-1"></i> View Code
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="certificate-details">
-                        <p class="mb-2"><strong>Issued:</strong> March 12, 2022</p>
-                        <p class="mb-3"><strong>By:</strong> Dept. of Education, Govt. of NCT of Delhi</p>
-                    </div>
-                    <div class="certificate-actions text-center">
-                        <button class="btn btn-primary" onclick="openImageModal('Screenshot_2022_0313_134831.jpg')">
-                            <i class="fas fa-eye me-1"></i> View Certificate
-                        </button>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Python Certificate -->
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="certificate-card shadow-lg p-3 rounded h-100">
-                    <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0">Python (Basic)</h4>
-                        <span class="badge bg-primary">HackerRank</span>
-                    </div>
-                    <div class="certificate-preview mb-3">
-                        <div class="pdf-placeholder bg-light d-flex align-items-center justify-content-center" 
-                             style="height: 200px; border-radius: 5px; cursor: pointer;" 
-                             onclick="openModal('python_basic certificate.pdf')">
-                            <div class="text-center">
-                                <i class="fas fa-file-pdf text-danger" style="font-size: 3rem;"></i>
-                                <p class="mt-2">Click to view certificate</p>
+                                <!-- CleanSheet – Excel Data Cleaner -->
+                <div class="col-md-6 project-item" data-category="web">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Live</span>
+                            <span class="badge bg-info float-end me-2">Updated</span>
+                            <h3 class="card-title">CleanSheet – Excel Data Cleaner</h3>
+                            <p class="card-text">
+                                A powerful Flask-based web application for cleaning and preprocessing Excel data. 
+                                Automates data cleaning tasks including duplicate removal, missing value handling, 
+                                formatting corrections, and data validation with user authentication system.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-primary">Flask</span>
+                                <span class="badge bg-primary">Pandas</span>
+                                <span class="badge bg-primary">Bootstrap</span>
+                                <span class="badge bg-primary">Authentication</span>
+                                <span class="badge bg-primary">Render</span>
+                            </div>
+                            <div class="project-features mb-3">
+                                <small class="text-muted">
+                                    <strong>Features:</strong> Duplicate removal • Missing value handling • Data formatting • 
+                                    User authentication • File validation • Real-time processing
+                                </small>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <a href="https://cleansheet.onrender.com/" target="_blank" class="btn btn-success">
+                                    <i class="fas fa-external-link-alt me-1"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/pythoxb0/Cleansheet" target="_blank" class="btn btn-outline-primary">
+                                    <i class="fab fa-github me-1"></i> View Code
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="certificate-actions text-center">
-                        <button class="btn btn-primary" onclick="openModal('python_basic certificate.pdf')">
-                            <i class="fas fa-eye me-1"></i> View Certificate
-                        </button>
-                    </div>
                 </div>
-            </div>
 
-            <!-- SQL Certificate -->
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="certificate-card shadow-lg p-3 rounded h-100">
-                    <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0">SQL (Basic)</h4>
-                        <span class="badge bg-primary">HackerRank</span>
-                    </div>
-                    <div class="certificate-preview mb-3">
-                        <div class="pdf-placeholder bg-light d-flex align-items-center justify-content-center" 
-                             style="height: 200px; border-radius: 5px; cursor: pointer;" 
-                             onclick="openModal('sql_basic certificate.pdf')">
-                            <div class="text-center">
-                                <i class="fas fa-file-pdf text-danger" style="font-size: 3rem;"></i>
-                                <p class="mt-2">Click to view certificate</p>
+                <!-- ERP System -->
+                <div class="col-md-6 project-item" data-category="web">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Active</span>
+                            <h3 class="card-title">ERP System</h3>
+                            <p class="card-text">
+                                Flask-based ERP system with modules for Sales, Customers, Inventory, and Revenue tracking. 
+                                Supports customer management, sales transactions, product stock updates, and business insights.
+                            </p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">Flask</span>
+                                <span class="badge bg-secondary">SQLAlchemy</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
                             </div>
+                            <a href="https://github.com/pythoxb0/ERP-SYSTEM-" target="_blank" class="btn btn-outline-primary">View Project</a>
                         </div>
                     </div>
-                    <div class="certificate-actions text-center">
-                        <button class="btn btn-primary" onclick="openModal('sql_basic certificate.pdf')">
-                            <i class="fas fa-eye me-1"></i> View Certificate
-                        </button>
+                </div>
+
+                <!-- House Price Prediction -->
+                <div class="col-md-6 project-item" data-category="ml">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Completed</span>
+                            <h3 class="card-title">House Price Prediction</h3>
+                            <p class="card-text">
+                                Machine Learning project using Linear Regression to predict house prices 
+                                based on multiple factors like location, size, and amenities.
+                            </p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Scikit-learn</span>
+                                <span class="badge bg-secondary">Linear Regression</span>
+                            </div>
+                            <a href="https://github.com/pythoxb0/California-House-price-prediction" target="_blank" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Profit Prediction -->
+                <div class="col-md-6 project-item" data-category="data">
+                    <div class="card project-card h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success float-end">Updated</span>
+                            <h3 class="card-title">Business Profit Prediction</h3>
+                            <p class="card-text">
+                                ML project to predict business profit based on investment in R&D, 
+                                marketing, and administration using Multiple Linear Regression.
+                            </p>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">ML</span>
+                                <span class="badge bg-secondary">Flask</span>
+                            </div>
+                            <a href="https://github.com/pythoxb0/Business-profit-prediction-" target="_blank" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section id="certificates" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="row">
+                <!-- AI & Coding Workshop Certificate -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="certificate-card shadow-lg p-3 rounded h-100">
+                        <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="mb-0">AI & Coding Workshop</h4>
+                            <span class="badge bg-success">STEMpedia</span>
+                        </div>
+                        <div class="certificate-preview mb-3">
+                            <div class="bg-light d-flex align-items-center justify-content-center" 
+                                 style="height: 200px; border-radius: 5px; overflow: hidden; cursor: pointer;" 
+                                 onclick="openImageModal('Screenshot_2022_0313_134831.jpg')">
+                                <div class="text-center p-3">
+                                    <i class="fas fa-certificate text-warning" style="font-size: 3rem;"></i>
+                                    <p class="mt-2">AI & Coding Workshop Participation Certificate</p>
+                                    <small class="text-muted">Click to view</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-details">
+                            <p class="mb-2"><strong>Issued:</strong> March 12, 2022</p>
+                            <p class="mb-3"><strong>By:</strong> Dept. of Education, Govt. of NCT of Delhi</p>
+                        </div>
+                        <div class="certificate-actions text-center">
+                            <button class="btn btn-primary" onclick="openImageModal('Screenshot_2022_0313_134831.jpg')">
+                                <i class="fas fa-eye me-1"></i> View Certificate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Python Certificate -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="certificate-card shadow-lg p-3 rounded h-100">
+                        <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="mb-0">Python (Basic)</h4>
+                            <span class="badge bg-primary">HackerRank</span>
+                        </div>
+                        <div class="certificate-preview mb-3">
+                            <div class="pdf-placeholder bg-light d-flex align-items-center justify-content-center" 
+                                 style="height: 200px; border-radius: 5px; cursor: pointer;" 
+                                 onclick="openModal('python_basic certificate.pdf')">
+                                <div class="text-center">
+                                    <i class="fas fa-file-pdf text-danger" style="font-size: 3rem;"></i>
+                                    <p class="mt-2">Click to view certificate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-actions text-center">
+                            <button class="btn btn-primary" onclick="openModal('python_basic certificate.pdf')">
+                                <i class="fas fa-eye me-1"></i> View Certificate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL Certificate -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="certificate-card shadow-lg p-3 rounded h-100">
+                        <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="mb-0">SQL (Basic)</h4>
+                            <span class="badge bg-primary">HackerRank</span>
+                        </div>
+                        <div class="certificate-preview mb-3">
+                            <div class="pdf-placeholder bg-light d-flex align-items-center justify-content-center" 
+                                 style="height: 200px; border-radius: 5px; cursor: pointer;" 
+                                 onclick="openModal('sql_basic certificate.pdf')">
+                                <div class="text-center">
+                                    <i class="fas fa-file-pdf text-danger" style="font-size: 3rem;"></i>
+                                    <p class="mt-2">Click to view certificate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-actions text-center">
+                            <button class="btn btn-primary" onclick="openModal('sql_basic certificate.pdf')">
+                                <i class="fas fa-eye me-1"></i> View Certificate
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Certificate Modal for PDFs -->
-<div class="modal fade" id="certificateModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalTitle">Certificate Preview</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <embed id="modalPdf" src="" type="application/pdf" width="100%" height="500px" />
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <!-- Certificate Modal for PDFs -->
+    <div class="modal fade" id="certificateModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Certificate Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <embed id="modalPdf" src="" type="application/pdf" width="100%" height="500px" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Image Modal for JPG Certificate -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">AI & Coding Workshop Certificate</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <img id="modalImage" src="" alt="Certificate" class="img-fluid" style="max-height: 70vh;">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <!-- Image Modal for JPG Certificate -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">AI & Coding Workshop Certificate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="Certificate" class="img-fluid" style="max-height: 70vh;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-function openModal(pdfUrl) {
-    document.getElementById('modalPdf').src = pdfUrl;
-    var myModal = new bootstrap.Modal(document.getElementById('certificateModal'));
-    myModal.show();
-}
-
-function openImageModal(imageUrl) {
-    document.getElementById('modalImage').src = imageUrl;
-    var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
-    myModal.show();
-}
-</script>
-<!-- map section  -->
-   <section class="map-section">
-  <div class="container">
-    <h2 class="section-title">My Location</h2>
-    <p class="text-center mb-4">Based in A-86 Ranaji Enclave, South West Part 2, Najafgarh, Delhi, India</p>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14003.12939913202!2d76.99106772482236!3d28.60955389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b5c00000001%3A0x6d4b4b3b3b3b3b3b!2sRanaji%20Enclave%2C%20Najafgarh%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1659876543210!5m2!1sen!2sus"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
+    <!-- map section  -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">My Location</h2>
+            <p class="text-center mb-4">Based in A-86 Ranaji Enclave, South West Part 2, Najafgarh, Delhi, India</p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14003.12939913202!2d76.99106772482236!3d28.60955389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b5c00000001%3A0x6d4b4b3b3b3b3b3b!2sRanaji%20Enclave%2C%20Najafgarh%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1659876543210!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
 
     <!-- Achievements Section -->
     <section class="py-5 bg-light">
@@ -896,11 +531,11 @@ function openImageModal(imageUrl) {
                             </div>
                             
                             <!-- Updated form with FormSubmit.co service -->
-                            <form action="https://formsubmit.co/sahilkumar1851320@gmail.com" method="POST">
+                            <form id="contact-form" action="https://formsubmit.co/sahilkumar1851320@gmail.com" method="POST">
                                 <input type="hidden" name="_subject" value="New contact form submission from Portfolio">
                                 <input type="hidden" name="_template" value="table">
                                 <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_next" value="https://programmersahilg.github.io/Portfolio/#">
+                                <input type="hidden" name="_next" value="https://pythoxb0.github.io/Portfolio/#">
                                 
                                 <div class="mb-3">
                                     <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -935,89 +570,116 @@ function openImageModal(imageUrl) {
         </div>
     </div>
 
-    <!-- Footer -->
-  <!-- Footer Section -->
-<footer class="bg-dark text-light py-4">
-  <div class="container text-center">
-    <h5 class="mb-3">Sahil Kumar</h5>
+   <!-- Footer -->
+<footer class="footer bg-dark text-light">
+    <div class="container">
+        <div class="row">
+            <!-- Brand & Description -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4 class="footer-brand mb-3">Sahil Kumar</h4>
+                <p class="footer-description">
+                    Python Developer & Data Science Enthusiast passionate about creating 
+                    innovative solutions and machine learning applications.
+                </p>
+                <div class="footer-contact">
+                    <p class="mb-1">
+                        <i class="fas fa-map-marker-alt me-2"></i>Delhi, India
+                    </p>
+                    <p class="mb-0">
+                        <i class="fas fa-envelope me-2"></i>sahilkumar1851320@gmail.com
+                    </p>
+                </div>
+            </div>
 
-    <!-- Social Media Icons -->
-    <div class="mb-3">
-      <a href="https://github.com/pythoxb0" target="_blank" class="text-light mx-2">
-        <i class="fab fa-github fa-lg"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sahilkumardata/" target="_blank" class="text-light mx-2">
-        <i class="fab fa-linkedin fa-lg"></i>
-      </a>
-      <a href="mailto:sahilkumar1851320@gmail.com" class="text-light mx-2">
-        <i class="fas fa-envelope fa-lg"></i>
-     
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="footer-heading mb-3">Quick Links</h5>
+                <ul class="footer-links list-unstyled">
+                    <li class="mb-2">
+                        <a href="#home" class="footer-link">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#about" class="footer-link">About</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#projects" class="footer-link">Projects</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="footer-heading mb-3">Technologies</h5>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Data Science</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Web Development</span>
+                </div>
+            </div>
+
+            <!-- Connect -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="footer-heading mb-3">Let's Connect</h5>
+                <p class="footer-connect-text mb-3">
+                    Interested in collaboration? Feel free to reach out!
+                </p>
+                <div class="footer-social">
+                    <a href="https://github.com/pythoxb0" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sahilkumardata/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:sahilkumar1851320@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom text-center pt-4 mt-4 border-top border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">
+                        &copy; 2025 Sahil Kumar. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-stats">
+                        <span class="stat-item">
+                            <i class="fas fa-code me-1"></i>Built with passion
+                        </span>
+                        <span class="stat-item ms-3">
+                            <i class="fas fa-heart text-danger me-1"></i>Made in India
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Copyright -->
-    <p class="mb-0">
-      &copy; 2025 Sahil Kumar. All rights reserved.
-    </p>
-  </div>
+    <!-- Back to Top Button in Footer -->
+    <button id="footer-back-to-top" class="footer-back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 </footer>
 
-<!-- FontAwesome Icons -->
-<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary">
+        <i class="bi bi-chevron-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Mobile Navigation
-        const hamburger = document.querySelector('.navbar-toggler');
-        const navLinks = document.querySelector('#navbarNav');
-
-        // Download Resume Button
-        document.querySelector('.download-resume').addEventListener('click', function (e) {
-            e.preventDefault();
-            window.open('resume.pdf', '_blank');
-        });
-
-        // Form submission handling
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.querySelector('form');
-            const toast = new bootstrap.Toast(document.getElementById('formToast'));
-            
-            form.addEventListener('submit', function(e) {
-                // Show toast notification
-                toast.show();
-                
-                // You can add additional form handling here if needed
-            });
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
