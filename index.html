@@ -1,45 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahil Kumar - Python Developer & Data Science Enthusiast</title>
+    <title>Sahil Kumar - Data Scientist & Kaggle Expert</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Sahil Kumar</a>
+            <a class="navbar-brand fw-bold" href="#">Sahil Kumar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#certificates">Certificates</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <div class="ms-3">
                     <button id="theme-toggle" class="btn btn-outline-light btn-sm">
@@ -51,98 +35,269 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Python Developer & Data Science Enthusiast</h1>
-                <p>Passionate about creating innovative solutions and machine learning applications</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn">Get In Touch</a>
-                    <a href="resume.pdf" target="_blank" class="btn btn-accent download-resume">Download Resume</a>
+    <section class="hero py-5 bg-primary text-white" id="home">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Data Scientist & Kaggle Expert</h1>
+                    <p class="lead mb-4">Passionate about machine learning, data analysis, and creating innovative solutions</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-light btn-lg me-3">Get In Touch</a>
+                        <a href="resume.pdf" target="_blank" class="btn btn-outline-light btn-lg">Download Resume</a>
+                    </div>
                 </div>
-               
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <section id="about" class="py-5">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">About Me</h2>
+                <p class="lead text-muted">Data Scientist | Kaggle Expert | Machine Learning Enthusiast</p>
+            </div>
+            
             <div class="row">
-                <div class="col-lg-6">
-                    <h4>Personal Details</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><strong>From:</strong> Delhi, India</li>
-                        <li class="mb-2"><strong>Interests:</strong> Programming, Data Science, AI, Web Development, Public Speaking, Fitness</li>
-                        <li class="mb-2"><strong>Strengths:</strong> Time Management, Problem Solving, Presentation Skills</li>
-                    </ul>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-4 pb-3 border-bottom">Profile</h4>
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-small me-3">
+                                        <i class="bi bi-geo-alt text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0">Based in</h6>
+                                        <p class="text-muted mb-0">Delhi, India</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-small me-3">
+                                        <i class="bi bi-award text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0">Notable Achievement</h6>
+                                        <p class="text-muted mb-0">
+                                            <span class="badge bg-primary text-white px-2 py-1">Kaggle Expert</span>
+                                            <small class="ms-1">Competitive Data Science</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center">
+                                    <div class="icon-small me-3">
+                                        <i class="bi bi-lightbulb text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-0">Interests</h6>
+                                        <p class="text-muted mb-0">Machine Learning, Data Analysis, AI Research, Technical Presentations</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h6 class="fw-bold mb-3">Key Strengths</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border py-1 px-3">Analytical Thinking</span>
+                                <span class="badge bg-light text-dark border py-1 px-3">Problem Solving</span>
+                                <span class="badge bg-light text-dark border py-1 px-3">Attention to Detail</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h4>My Journey</h4>
-                    <p>I'm a passionate developer who started coding at a young age. My journey in programming began with Python, and I quickly developed an interest in Data Science and Machine Learning.</p>
-                    <p>I believe in continuous learning and constantly challenge myself with new projects and technologies. My goal is to become a proficient Data Scientist and use my skills to solve real-world problems.</p>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-4 pb-3 border-bottom">My Journey</h4>
+                            <p class="mb-4">
+                                I'm a dedicated Data Scientist who began my programming journey with Python and quickly 
+                                developed a passion for Machine Learning. My interest in solving complex problems through 
+                                data-driven approaches led me to competitive data science.
+                            </p>
+                            
+                            <div class="alert alert-primary mb-4">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-trophy me-3"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Kaggle Expert</h6>
+                                        <p class="mb-0 small">
+                                            Earned Expert status through top performances in Kaggle notebook, 
+                                            demonstrating advanced skills in feature engineering, model optimization, 
+                                            and ensemble techniques.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="mb-0">
+                                I believe in the power of data to drive meaningful decisions and create impact. 
+                                My approach combines technical expertise with business understanding to develop 
+                                practical machine learning solutions.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5">
+    <section id="skills" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Technical Skills</h2>
+                <p class="lead text-muted">Core competencies in data science, machine learning, and analytics</p>
+            </div>
+            
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card skill-card h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-code-slash display-4 mb-3" style="color: var(--secondary);"></i>
-                            <h3>Programming</h3>
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <span class="badge bg-primary m-1">Python</span>
-                                <span class="badge bg-primary m-1">SQL</span>
-                                <span class="badge bg-primary m-1">PHP</span>
-                                <span class="badge bg-primary m-1">JavaScript</span>
-                                <span class="badge bg-primary m-1">HTML</span>
-                                <span class="badge bg-primary m-1">CSS</span>
-                                <span class="badge bg-primary m-1">Flask</span>
+                <!-- Data Science & ML -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-4">
+                                <div class="skill-icon d-inline-block mb-3">
+                                    <i class="bi bi-graph-up-arrow fs-2 text-white"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">Data Science & ML</h3>
+                            </div>
+                            <div class="skill-items">
+                                <div class="skill-item d-flex justify-content-between mb-3">
+                                    <span>Python</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-item d-flex justify-content-between mb-3">
+                                    <span>ML /DL</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item d-flex justify-content-between mb-3">
+                                    <span>EDA</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot "></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-item d-flex justify-content-between mb-3">
+                                    <span>Data cleaning & Analysis</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot "></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-item d-flex justify-content-between mb-3">
+                                    <span>Model evaluation and validation</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                </div>
+                               
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="card skill-card h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-gear-fill display-4 mb-3" style="color: var(--secondary);"></i>
-                            <h3>Frameworks & Libraries</h3>
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <span class="badge bg-success m-1">Pandas</span>
-                                <span class="badge bg-success m-1">NumPy</span>
-                                <span class="badge bg-success m-1">Matplotlib</span>
-                                <span class="badge bg-success m-1">Scikit-learn</span>
-                                <span class="badge bg-success m-1">Tkinter</span>
-                                <span class="badge bg-success m-1">Bootstrap</span>
-                                <span class="badge bg-success m-1">Seaborn</span>
-                                <span class="badge bg-success m-1">Tensorflow</span>
-                                <span class="badge bg-success m-1">OpenCV</span>
-                                <span class="badge bg-success m-1">NLP</span>
+                <!-- Libraries & Tools -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-4">
+                                <div class="skill-icon d-inline-block mb-3">
+                                    <i class="bi bi-gear-fill fs-2 text-white"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">Libraries & Tools</h3>
+                            </div>
+                            <div class="skill-tags d-flex flex-wrap justify-content-center gap-2">
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">Pandas</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">NumPy</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">Scikit-learn</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">PyTorch</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">Flask</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">TensorFlow</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">Mysql</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">Seaborn</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">Fastapi</span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 py-2 px-3">SQL</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="card skill-card h-100">
-                        <div class="card-body text-center p-4">
-                            <i class="bi bi-tools display-4 mb-3" style="color: var(--secondary);"></i>
-                            <h3>Tools & Specializations</h3>
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <span class="badge bg-info m-1">Git</span>
-                                <span class="badge bg-info m-1">MySQL</span>
-                                <span class="badge bg-info m-1">Power BI</span>
-                                <span class="badge bg-info m-1">Jupyter</span>
-                                <span class="badge bg-info m-1">Data Cleaning</span>
-                                <span class="badge bg-info m-1">ML Models</span>
+                <!-- Data Engineering -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-4">
+                                <div class="skill-icon d-inline-block mb-3">
+                                    <i class="bi bi-database-fill fs-2 text-white"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-0">Data Engineering</h3>
+                            </div>
+                            <div class="skill-items">
+                                <div class="skill-item d-flex justify-content-between mb-3">
+                                    <span>ML Pipeline Design</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-item d-flex justify-content-between mb-3">
+                                    <span>Feature Engineering</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot"></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-item d-flex justify-content-between mb-3">
+                                    <span>ETL Development</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot"></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-item d-flex justify-content-between">
+                                    <span>Model Deployment</span>
+                                    <div class="skill-level">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot"></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -151,369 +306,415 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            
-            <!-- Project Filter -->
-            <div class="text-center mb-4">
-                <div class="btn-group" role="group" aria-label="Project filter">
-                    <button type="button" class="btn btn-outline-primary active" data-filter="all">All</button>
-                    <button type="button" class="btn btn-outline-primary" data-filter="web">Web Apps</button>
-                    <button type="button" class="btn btn-outline-primary" data-filter="data">Data Science</button>
-                </div>
-            </div>
-            
-            <div class="row g-4 project-container">
-                <!-- Expense Tracker -->
-                <div class="col-md-6 project-item" data-category="web">
-                    <div class="card project-card h-100">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success float-end">Updated</span>
-                            <h3 class="card-title">Expense Tracker</h3>
-                            <p class="card-text">
-                                A Flask-based web app to track your daily expenses. 
-                                Users can add, view, and manage their income and expenses efficiently.
-                            </p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">Python</span>
-                                <span class="badge bg-secondary">Flask</span>
-                                <span class="badge bg-secondary">SQLite</span>
-                            </div>
-                            <a href="https://github.com/pythoxb0/Expense-tracker-" target="_blank" class="btn btn-outline-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Iris Flower Classification API -->
-                <div class="col-md-6 project-item" data-category="data" >
-                    <div class="card project-card h-100">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success float-end">Live</span>
-                            <h3 class="card-title">Iris Flower Classification API</h3>
-                            <p class="card-text">
-                                A machine learning REST API for iris flower species classification. 
-                                Deployed with a beautiful frontend interface for real-time predictions 
-                                based on sepal and petal measurements.
-                            </p>
-                            <div class="mb-3">
-                                <span class="badge bg-primary">Python</span>
-                                <span class="badge bg-primary">Flask</span>
-                                <span class="badge bg-primary">Scikit-learn</span>
-                                <span class="badge bg-primary">Machine Learning</span>
-                                <span class="badge bg-primary">REST API</span>
-                                <span class="badge bg-primary">Render</span>
-                            </div>
-                            <div class="project-features mb-3">
-                                <small class="text-muted">
-                                    <strong>Features:</strong> Real-time predictions • RESTful API • Beautiful UI • Model deployment
-                                </small>
-                            </div>
-                            <div class="btn-group" role="group">
-                                <a href="https://iris-api-oxrk.onrender.com/" target="_blank" class="btn btn-success">
-                                    <i class="fas fa-external-link-alt me-1"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/pythoxb0/iris-api" target="_blank" class="btn btn-outline-primary">
-                                    <i class="fab fa-github me-1"></i> View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                                <!-- CleanSheet – Excel Data Cleaner -->
-                <div class="col-md-6 project-item" data-category="web">
-                    <div class="card project-card h-100">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success float-end">Live</span>
-                            <span class="badge bg-info float-end me-2">Updated</span>
-                            <h3 class="card-title">CleanSheet – Excel Data Cleaner</h3>
-                            <p class="card-text">
-                                A powerful Flask-based web application for cleaning and preprocessing Excel data. 
-                                Automates data cleaning tasks including duplicate removal, missing value handling, 
-                                formatting corrections, and data validation with user authentication system.
-                            </p>
-                            <div class="mb-3">
-                                <span class="badge bg-primary">Python</span>
-                                <span class="badge bg-primary">Flask</span>
-                                <span class="badge bg-primary">Pandas</span>
-                                <span class="badge bg-primary">Bootstrap</span>
-                                <span class="badge bg-primary">Authentication</span>
-                                <span class="badge bg-primary">Render</span>
-                            </div>
-                            <div class="project-features mb-3">
-                                <small class="text-muted">
-                                    <strong>Features:</strong> Duplicate removal • Missing value handling • Data formatting • 
-                                    User authentication • File validation • Real-time processing
-                                </small>
-                            </div>
-                            <div class="btn-group" role="group">
-                                <a href="https://cleansheet.onrender.com/" target="_blank" class="btn btn-success">
-                                    <i class="fas fa-external-link-alt me-1"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/pythoxb0/Cleansheet" target="_blank" class="btn btn-outline-primary">
-                                    <i class="fab fa-github me-1"></i> View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ERP System -->
-                <div class="col-md-6 project-item" data-category="web">
-                    <div class="card project-card h-100">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success float-end">Active</span>
-                            <h3 class="card-title">ERP System</h3>
-                            <p class="card-text">
-                                Flask-based ERP system with modules for Sales, Customers, Inventory, and Revenue tracking. 
-                                Supports customer management, sales transactions, product stock updates, and business insights.
-                            </p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">Flask</span>
-                                <span class="badge bg-secondary">SQLAlchemy</span>
-                                <span class="badge bg-secondary">Bootstrap</span>
-                            </div>
-                            <a href="https://github.com/pythoxb0/ERP-SYSTEM-" target="_blank" class="btn btn-outline-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- House Price Prediction -->
-                <div class="col-md-6 project-item" data-category="data">
-                    <div class="card project-card h-100">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success float-end">Completed</span>
-                            <h3 class="card-title">House Price Prediction</h3>
-                            <p class="card-text">
-                                Machine Learning project using Linear Regression to predict house prices 
-                                based on multiple factors like location, size, and amenities.
-                            </p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">Python</span>
-                                <span class="badge bg-secondary">Scikit-learn</span>
-                                <span class="badge bg-secondary">Linear Regression</span>
-                            </div>
-                            <a href="https://github.com/pythoxb0/California-House-price-prediction" target="_blank" class="btn btn-outline-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- IdeaHub Project -->
-                <div class="col-md-6 project-item" data-category="web">
-                    <div class="card project-card h-100">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success float-end">Completed</span>
-                            <h3 class="card-title">IdeaHub</h3>
-                            <p class="card-text">
-                                A web application for collecting, organizing, and sharing creative ideas. 
-                                Users can create idea boards, collaborate with others, and bring their concepts to life.
-                            </p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">Python</span>
-                                <span class="badge bg-secondary">Flask</span>
-                                <span class="badge bg-secondary">SQLite</span>
-                                <span class="badge bg-secondary">Web Development</span>
-                            </div>
-                            <div class="btn-group" role="group">
-                                <a href="https://ideahub-vpx4.onrender.com/" target="_blank" class="btn btn-outline-primary">Live Demo</a>
-                                <a href="https://github.com/pythoxb0/IdeaHub" target="_blank" class="btn btn-outline-secondary">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Business Profit Prediction -->
-                <div class="col-md-6 project-item" data-category="data">
-                    <div class="card project-card h-100">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success float-end">Updated</span>
-                            <h3 class="card-title">Business Profit Prediction</h3>
-                            <p class="card-text">
-                                ML project to predict business profit based on investment in R&D, 
-                                marketing, and administration using Multiple Linear Regression.
-                            </p>
-                            <div class="mb-2">
-                                <span class="badge bg-secondary">Python</span>
-                                <span class="badge bg-secondary">ML</span>
-                                <span class="badge bg-secondary">Flask</span>
-                            </div>
-                            <a href="https://business-profit-prediction.onrender.com/" target="_blank" class="btn btn-outline-secondary">Live demo</a>
-                            <a href="https://github.com/pythoxb0/Business-profit-prediction-" target="_blank" class="btn btn-outline-primary">View Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                
+   <!-- Projects Section -->
+<section id="projects" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Projects</h2>
+            <p class="lead text-muted">Data Science & Web Development Projects</p>
+        </div>
+        
+        <!-- Project Filter -->
+        <div class="text-center mb-5">
+            <div class="btn-group" role="group" aria-label="Project filter">
+                <button type="button" class="btn btn-outline-primary active" data-filter="all">All</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="data">Data Science</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="web">Web Apps</button>
             </div>
         </div>
-    </section>
-
-    <!-- Certificate Section -->
-    <section id="certificates" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="row">
-                <!-- AI & Coding Workshop Certificate -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="certificate-card shadow-lg p-3 rounded h-100">
-                        <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
-                            <h4 class="mb-0">AI & Coding Workshop</h4>
-                            <span class="badge bg-success">STEMpedia</span>
+        
+        <div class="row g-4 project-container">
+            <!-- Iris Flower Classification API -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="data">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success float-end">Live</span>
+                        <h3 class="card-title h5 fw-bold">Iris Flower Classification API</h3>
+                        <p class="card-text">
+                            Machine learning REST API for iris flower species classification with real-time predictions.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">Flask</span>
+                            <span class="badge bg-primary">Scikit-learn</span>
+                            <span class="badge bg-primary">Machine Learning</span>
                         </div>
-                        <div class="certificate-preview mb-3">
-                            <div class="bg-light d-flex align-items-center justify-content-center" 
-                                 style="height: 200px; border-radius: 5px; overflow: hidden; cursor: pointer;" 
-                                 onclick="openImageModal('Screenshot_2022_0313_134831.jpg')">
-                                <div class="text-center p-3">
-                                    <i class="fas fa-certificate text-warning" style="font-size: 3rem;"></i>
-                                    <p class="mt-2">AI & Coding Workshop Participation Certificate</p>
-                                    <small class="text-muted">Click to view</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="certificate-details">
-                            <p class="mb-2"><strong>Issued:</strong> March 12, 2022</p>
-                            <p class="mb-3"><strong>By:</strong> Dept. of Education, Govt. of NCT of Delhi</p>
-                        </div>
-                        <div class="certificate-actions text-center">
-                            <button class="btn btn-primary" onclick="openImageModal('Screenshot_2022_0313_134831.jpg')">
-                                <i class="fas fa-eye me-1"></i> View Certificate
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Python Certificate -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="certificate-card shadow-lg p-3 rounded h-100">
-                        <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
-                            <h4 class="mb-0">Python (Basic)</h4>
-                            <span class="badge bg-primary">HackerRank</span>
-                        </div>
-                        <div class="certificate-preview mb-3">
-                            <div class="pdf-placeholder bg-light d-flex align-items-center justify-content-center" 
-                                 style="height: 200px; border-radius: 5px; cursor: pointer;" 
-                                 onclick="openModal('python_basic certificate.pdf')">
-                                <div class="text-center">
-                                    <i class="fas fa-file-pdf text-danger" style="font-size: 3rem;"></i>
-                                    <p class="mt-2">Click to view certificate</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="certificate-actions text-center">
-                            <button class="btn btn-primary" onclick="openModal('python_basic certificate.pdf')">
-                                <i class="fas fa-eye me-1"></i> View Certificate
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SQL Certificate -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="certificate-card shadow-lg p-3 rounded h-100">
-                        <div class="certificate-header d-flex justify-content-between align-items-center mb-3">
-                            <h4 class="mb-0">SQL (Basic)</h4>
-                            <span class="badge bg-primary">HackerRank</span>
-                        </div>
-                        <div class="certificate-preview mb-3">
-                            <div class="pdf-placeholder bg-light d-flex align-items-center justify-content-center" 
-                                 style="height: 200px; border-radius: 5px; cursor: pointer;" 
-                                 onclick="openModal('sql_basic certificate.pdf')">
-                                <div class="text-center">
-                                    <i class="fas fa-file-pdf text-danger" style="font-size: 3rem;"></i>
-                                    <p class="mt-2">Click to view certificate</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="certificate-actions text-center">
-                            <button class="btn btn-primary" onclick="openModal('sql_basic certificate.pdf')">
-                                <i class="fas fa-eye me-1"></i> View Certificate
-                            </button>
+                        <div class="btn-group w-100" role="group">
+                            <a href="https://iris-api-oxrk.onrender.com/" target="_blank" class="btn btn-success">
+                                <i class="fas fa-external-link-alt me-1"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/pythoxb0/iris-api" target="_blank" class="btn btn-outline-primary">
+                                <i class="fab fa-github me-1"></i> Code
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Certificate Modal for PDFs -->
-    <div class="modal fade" id="certificateModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Certificate Preview</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- CleanSheet – Excel Data Cleaner -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success float-end">Live</span>
+                        <h3 class="card-title h5 fw-bold">CleanSheet – Excel Data Cleaner</h3>
+                        <p class="card-text">
+                            Flask web app for cleaning and preprocessing Excel data with user authentication.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">Flask</span>
+                            <span class="badge bg-primary">Pandas</span>
+                            <span class="badge bg-primary">Authentication</span>
+                        </div>
+                        <div class="btn-group w-100" role="group">
+                            <a href="https://cleansheet.onrender.com/" target="_blank" class="btn btn-success">
+                                <i class="fas fa-external-link-alt me-1"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/pythoxb0/Cleansheet" target="_blank" class="btn btn-outline-primary">
+                                <i class="fab fa-github me-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body text-center">
-                    <embed id="modalPdf" src="" type="application/pdf" width="100%" height="500px" />
+            </div>
+            <!-- Customer Churn Prediction ANN -->
+<div class="col-md-6 col-lg-4 project-item" data-category="data">
+    <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body p-4">
+            <span class="badge bg-info float-end">Kaggle Notebook</span>
+            <h3 class="card-title h5 fw-bold">Customer Churn Prediction</h3>
+            <p class="card-text">
+                Artificial Neural Network model to predict customer churn using deep learning techniques.
+            </p>
+            <div class="mb-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-primary">TensorFlow</span>
+                <span class="badge bg-primary">ANN</span>
+                <span class="badge bg-primary">Deep Learning</span>
+            </div>
+            <div class="btn-group w-100" role="group">
+                <a href="https://www.kaggle.com/code/pythoxb/customer-churn-prediction-ann" target="_blank" class="btn btn-info">
+                    <i class="fab fa-kaggle me-1"></i> Kaggle
+                </a>
+                <a href="https://www.kaggle.com/code/pythoxb/customer-churn-prediction-ann" target="_blank" class="btn btn-outline-info">
+                    <i class="fas fa-code me-1"></i> View Code
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BMW Sales EDA -->
+<div class="col-md-6 col-lg-4 project-item" data-category="data">
+    <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body p-4">
+            <span class="badge bg-warning text-dark float-end">EDA</span>
+            <h3 class="card-title h5 fw-bold">BMW Sales Data Analysis</h3>
+            <p class="card-text">
+                Comprehensive Exploratory Data Analysis of BMW sales data with visualization and insights.
+            </p>
+            <div class="mb-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-primary">Pandas</span>
+                <span class="badge bg-primary">Matplotlib</span>
+                <span class="badge bg-primary">Seaborn</span>
+            </div>
+            <div class="btn-group w-100" role="group">
+                <a href="https://www.kaggle.com/code/pythoxb/bmw-sales-data-eda" target="_blank" class="btn btn-warning text-dark">
+                    <i class="fab fa-kaggle me-1"></i> Kaggle
+                </a>
+                <a href="https://www.kaggle.com/code/pythoxb/bmw-sales-data-eda" target="_blank" class="btn btn-outline-warning">
+                    <i class="fas fa-chart-bar me-1"></i> View Analysis
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Dolphin AI Chatbot -->
+<div class="col-md-6 col-lg-4 project-item" data-category="data">
+    <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body p-4">
+            <span class="badge bg-info float-end">AI Chat</span>
+            <h3 class="card-title h5 fw-bold">Dolphin AI Chatbot</h3>
+            <p class="card-text">
+                A conversational AI chatbot application with chat history functionality, built with Flask.
+            </p>
+            <div class="mb-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-primary">Flask</span>
+                <span class="badge bg-primary">JavaScript</span>
+                <span class="badge bg-primary">AI Integration</span>
+            </div>
+            <div class="btn-group w-100" role="group">
+                <a href="https://github.com/pythoxb0/Dolphin" target="_blank" class="btn btn-info">
+                    <i class="fab fa-github me-1"></i> GitHub
+                </a>
+                <a href="https://github.com/pythoxb0/Dolphin" target="_blank" class="btn btn-outline-info">
+                    <i class="fas fa-robot me-1"></i> View Project
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Handwritten Digit Classification ANN -->
+<div class="col-md-6 col-lg-4 project-item" data-category="data">
+    <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body p-4">
+            <span class="badge bg-info float-end">Computer Vision</span>
+            <h3 class="card-title h5 fw-bold">Handwritten Digit Classification</h3>
+            <p class="card-text">
+                ANN model for MNIST handwritten digit recognition using TensorFlow and Keras.
+            </p>
+            <div class="mb-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-primary">TensorFlow</span>
+                <span class="badge bg-primary">Keras</span>
+                <span class="badge bg-primary">Computer Vision</span>
+            </div>
+            <div class="btn-group w-100" role="group">
+                <a href="https://www.kaggle.com/code/pythoxb/handwritten-digit-classification-ann" target="_blank" class="btn btn-info">
+                    <i class="fab fa-kaggle me-1"></i> Kaggle
+                </a>
+                <a href="https://www.kaggle.com/code/pythoxb/handwritten-digit-classification-ann" target="_blank" class="btn btn-outline-info">
+                    <i class="fas fa-brain me-1"></i> View Model
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Expense Tracker -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success float-end">Updated</span>
+                        <h3 class="card-title h5 fw-bold">Expense Tracker</h3>
+                        <p class="card-text">
+                            Flask-based web app to track daily expenses with income and expense management.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">Flask</span>
+                            <span class="badge bg-primary">SQLite</span>
+                        </div>
+                        <a href="https://github.com/pythoxb0/Expense-tracker-" target="_blank" class="btn btn-outline-primary w-100">
+                            <i class="fab fa-github me-1"></i> View Project
+                        </a>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+
+            <!-- House Price Prediction -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="data">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success float-end">Completed</span>
+                        <h3 class="card-title h5 fw-bold">House Price Prediction</h3>
+                        <p class="card-text">
+                            Machine Learning project using Linear Regression to predict house prices.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">Scikit-learn</span>
+                            <span class="badge bg-primary">Linear Regression</span>
+                        </div>
+                        <a href="https://github.com/pythoxb0/California-House-price-prediction" target="_blank" class="btn btn-outline-primary w-100">
+                            <i class="fab fa-github me-1"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Profit Prediction -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="data">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success float-end">Live</span>
+                        <h3 class="card-title h5 fw-bold">Business Profit Prediction</h3>
+                        <p class="card-text">
+                            ML project to predict business profit using Multiple Linear Regression.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">Machine Learning</span>
+                            <span class="badge bg-primary">Flask</span>
+                        </div>
+                        <div class="btn-group w-100" role="group">
+                            <a href="https://business-profit-prediction.onrender.com/" target="_blank" class="btn btn-outline-primary">Live Demo</a>
+                            <a href="https://github.com/pythoxb0/Business-profit-prediction-" target="_blank" class="btn btn-outline-secondary">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IdeaHub -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success float-end">Live</span>
+                        <h3 class="card-title h5 fw-bold">IdeaHub</h3>
+                        <p class="card-text">
+                            Web application for collecting, organizing, and sharing creative ideas.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">Flask</span>
+                            <span class="badge bg-primary">SQLite</span>
+                            <span class="badge bg-primary">Web Development</span>
+                        </div>
+                        <div class="btn-group w-100" role="group">
+                            <a href="https://ideahub-vpx4.onrender.com/" target="_blank" class="btn btn-outline-primary">Live Demo</a>
+                            <a href="https://github.com/pythoxb0/IdeaHub" target="_blank" class="btn btn-outline-secondary">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ERP System -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success float-end">Active</span>
+                        <h3 class="card-title h5 fw-bold">ERP System</h3>
+                        <p class="card-text">
+                            Flask-based ERP system with modules for Sales, Customers, Inventory, and Revenue tracking.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">Flask</span>
+                            <span class="badge bg-primary">SQLAlchemy</span>
+                            <span class="badge bg-primary">Bootstrap</span>
+                        </div>
+                        <a href="https://github.com/pythoxb0/ERP-SYSTEM-" target="_blank" class="btn btn-outline-primary w-100">
+                            <i class="fab fa-github me-1"></i> View Project
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Image Modal for JPG Certificate -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">AI & Coding Workshop Certificate</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <img id="modalImage" src="" alt="Certificate" class="img-fluid" style="max-height: 70vh;">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<script>
+// Project Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.btn-group .btn');
+    const projectItems = document.querySelectorAll('.project-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Filter projects
+            projectItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.style.display = 'block';
+                    // Add fade in animation
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 
-    <!-- map section  -->
-    <section class="map-section">
-        <div class="container">
-            <h2 class="section-title">My Location</h2>
-            <p class="text-center mb-4">Based in A-86 Ranaji Enclave, South West Part 2, Najafgarh, Delhi, India</p>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14003.12939913202!2d76.99106772482236!3d28.60955389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b5c00000001%3A0x6d4b4b3b3b3b3b3b!2sRanaji%20Enclave%2C%20Najafgarh%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1659876543210!5m2!1sen!2sus"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
+<style>
+.project-item {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
 
+.card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-outline-primary.active {
+    background-color: #4361ee;
+    color: white;
+}
+
+.btn-group {
+    gap: 5px;
+}
+
+.btn-group .btn {
+    border-radius: 6px !important;
+}
+
+@media (max-width: 768px) {
+    .btn-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 5px;
+    }
+}
+</style>
     <!-- Achievements Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="row">
-                <div class="col-md-4 text-center mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Achievements</h2>
+                <p class="lead text-muted">Recognized accomplishments in data science</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
                         <div class="card-body p-4">
-                            <i class="bi bi-trophy display-4 mb-3" style="color: var(--accent);"></i>
-                            <h3>Project Development</h3>
-                            <p>Built multiple end-to-end projects at age 18, demonstrating advanced technical skills and dedication.</p>
+                            <div class="icon-circle mx-auto mb-3">
+                                <i class="bi bi-trophy-fill fs-2 text-white"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Kaggle Expert</h3>
+                            <p class="text-muted mb-0">
+                                Achieved Kaggle Expert status with top rankings in data science notebook.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
                         <div class="card-body p-4">
-                            <i class="bi bi-lightbulb display-4 mb-3" style="color: var(--accent);"></i>
-                            <h3>Technical Expertise</h3>
-                            <p>Strong knowledge in Machine Learning & Python libraries with practical implementation experience.</p>
+                            <div class="icon-circle mx-auto mb-3">
+                                <i class="bi bi-cpu-fill fs-2 text-white"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">ML Engineering</h3>
+                            <p class="text-muted mb-0">
+                                Developed end-to-end machine learning systems with production deployment.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
+
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
                         <div class="card-body p-4">
-                            <i class="bi bi-mic display-4 mb-3" style="color: var(--accent);"></i>
-                            <h3>Communication Skills</h3>
-                            <p>Experience in public speaking & presentation, able to explain complex technical concepts clearly.</p>
+                            <div class="icon-circle mx-auto mb-3">
+                                <i class="bi bi-database-fill fs-2 text-white"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Data Engineering</h3>
+                            <p class="text-muted mb-0">
+                                Built scalable data pipelines and ETL processes for large datasets.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -521,184 +722,726 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body p-5">
-                            <div class="text-center mb-5">
-                                <h3>Let's Connect!</h3>
-                                <p class="text-muted">Feel free to reach out for collaborations or just to say hello</p>
-                            </div>
-                            <div class="row mb-4">
-                                <div class="col-md-6 text-center mb-3">
-                                    <i class="bi bi-envelope contact-icon"></i>
-                                    <span>sahilkumar1851320@gmail.com</span>
-                                </div>
-                                <div class="col-md-6 text-center mb-3">
-                                    <i class="bi bi-geo-alt contact-icon"></i>
-                                    <span>Delhi, India</span>
-                                </div>
-                            </div>
-                            <div class="text-center mb-4">
-                                <a href="https://github.com/pythoxb0"target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
-                                <a href="https://www.linkedin.com/in/sahilkumardata/"target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                                <a href="mailto:sahilkumar1851320@gmail.com"target="_blank" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
-                            </div>
-                            
-                            <!-- Updated form with FormSubmit.co service -->
-                            <form id="contact-form" action="https://formsubmit.co/sahilkumar1851320@gmail.com" method="POST">
-                                <input type="hidden" name="_subject" value="New contact form submission from Portfolio">
-                                <input type="hidden" name="_template" value="table">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_next" value="https://pythoxb0.github.io/Portfolio/#">
-                                
-                                <div class="mb-3">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
-                                </div>
-                                <div class="mb-3">
-                                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg px-4">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Toast notification -->
-    <div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" id="formToast">
-        <div class="d-flex">
-            <div class="toast-body">
-                Message sent successfully!
-            </div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-    </div>
-
-   <!-- Footer -->
-<footer class="footer bg-dark text-light">
+    <!-- Certificates Section -->
+<section id="certificates" class="py-5 bg-light">
     <div class="container">
-        <div class="row">
-            <!-- Brand & Description -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h4 class="footer-brand mb-3">Sahil Kumar</h4>
-                <p class="footer-description">
-                    Python Developer & Data Science Enthusiast passionate about creating 
-                    innovative solutions and machine learning applications.
-                </p>
-                <div class="footer-contact">
-                    <p class="mb-1">
-                        <i class="fas fa-map-marker-alt me-2"></i>Delhi, India
-                    </p>
-                    <p class="mb-0">
-                        <i class="fas fa-envelope me-2"></i>sahilkumar1851320@gmail.com
-                    </p>
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Certifications</h2>
+            <p class="lead text-muted">Professional Certifications & Achievements</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Python Certificate -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="certificate-icon mb-3">
+                            <i class="bi bi-file-earmark-text-fill fs-1 text-primary"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">Python </h4>
+                        <div class="mb-3">
+                            <span class="badge bg-primary">HackerRank</span>
+                        </div>
+                        <p class="text-muted mb-4 flex-grow-1">
+                            Certified in Python programming fundamentals including data structures, algorithms, and problem solving.
+                        </p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary w-100" onclick="openCertificate('python_basic certificate.pdf')">
+                                <i class="fas fa-eye me-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Quick Links -->
-            <div class="col-lg-2 col-md-6 mb-4">
-                <h5 class="footer-heading mb-3">Quick Links</h5>
-                <ul class="footer-links list-unstyled">
-                    <li class="mb-2">
-                        <a href="#home" class="footer-link">Home</a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="#about" class="footer-link">About</a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="#projects" class="footer-link">Projects</a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="#contact" class="footer-link">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Technologies -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5 class="footer-heading mb-3">Technologies</h5>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">Flask</span>
-                    <span class="tech-tag">Data Science</span>
-                    <span class="tech-tag">SQL</span>
-                    <span class="tech-tag">Web Development</span>
+            <!-- SQL Certificate -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="certificate-icon mb-3">
+                            <i class="bi bi-database-fill fs-1 text-success"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">SQL </h4>
+                        <div class="mb-3">
+                            <span class="badge bg-success">HackerRank</span>
+                        </div>
+                        <p class="text-muted mb-4 flex-grow-1">
+                            Certified in SQL fundamentals including queries, joins, aggregations, and database management.
+                        </p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-success w-100" onclick="openCertificate('sql_basic certificate.pdf')">
+                                <i class="fas fa-eye me-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Connect -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5 class="footer-heading mb-3">Let's Connect</h5>
-                <p class="footer-connect-text mb-3">
-                    Interested in collaboration? Feel free to reach out!
-                </p>
-                <div class="footer-social">
-                    <a href="https://github.com/pythoxb0" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sahilkumardata/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="mailto:sahilkumar1851320@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
+            <!-- AI & Coding Workshop Certificate -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="certificate-icon mb-3">
+                            <i class="bi bi-award-fill fs-1 text-warning"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">AI & Coding Workshop</h4>
+                        <div class="mb-3">
+                            <span class="badge bg-warning text-dark">STEMpedia</span>
+                        </div>
+                        <p class="text-muted mb-4 flex-grow-1">
+                            Workshop participation certificate from Dept. of Education, Govt. of NCT of Delhi.
+                        </p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-warning w-100" onclick="openImageCertificate('Screenshot_2022_0313_134831.jpg')">
+                                <i class="fas fa-eye me-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Add more certificate columns here as needed -->
+            <!-- Example template for additional certificates -->
+            <!--
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="certificate-icon mb-3">
+                            <i class="bi bi-patch-check-fill fs-1 text-info"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">Certificate Title</h4>
+                        <div class="mb-3">
+                            <span class="badge bg-info">Issuer</span>
+                        </div>
+                        <p class="text-muted mb-4 flex-grow-1">
+                            Certificate description goes here.
+                        </p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-info w-100">
+                                <i class="fas fa-eye me-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="footer-bottom text-center pt-4 mt-4 border-top border-secondary">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-md-start mb-2 mb-md-0">
-                    <p class="mb-0">
-                        &copy; 2025 Sahil Kumar. All rights reserved.
-                    </p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="footer-stats">
-                        <span class="stat-item">
-                            <i class="fas fa-code me-1"></i>Built with passion
-                        </span>
-                        <span class="stat-item ms-3">
-                            <i class="fas fa-heart text-danger me-1"></i>Made in India
-                        </span>
+        <!-- Certificate Modal -->
+        <div class="modal fade" id="certificateModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold">Certificate</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center p-0">
+                        <iframe id="certificateFrame" src="" width="100%" height="500px" style="border: none;"></iframe>
+                        <img id="certificateImage" src="" alt="Certificate" class="img-fluid d-none">
+                    </div>
+                    <div class="modal-footer">
+                        <a id="downloadBtn" href="#" class="btn btn-primary" download>
+                            <i class="fas fa-download me-2"></i>Download
+                        </a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Back to Top Button in Footer -->
-    <button id="footer-back-to-top" class="footer-back-to-top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+<script>
+// Certificate viewing functions
+function openCertificate(pdfFile) {
+    const modal = new bootstrap.Modal(document.getElementById('certificateModal'));
+    const frame = document.getElementById('certificateFrame');
+    const image = document.getElementById('certificateImage');
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    // Show PDF viewer, hide image
+    frame.classList.remove('d-none');
+    image.classList.add('d-none');
+    
+    // Set PDF source
+    frame.src = pdfFile;
+    
+    // Set download link
+    downloadBtn.href = pdfFile;
+    downloadBtn.download = pdfFile;
+    
+    modal.show();
+}
+
+function openImageCertificate(imageFile) {
+    const modal = new bootstrap.Modal(document.getElementById('certificateModal'));
+    const frame = document.getElementById('certificateFrame');
+    const image = document.getElementById('certificateImage');
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    // Show image, hide PDF viewer
+    frame.classList.add('d-none');
+    image.classList.remove('d-none');
+    
+    // Set image source
+    image.src = imageFile;
+    
+    // Set download link
+    downloadBtn.href = imageFile;
+    downloadBtn.download = imageFile;
+    
+    modal.show();
+}
+
+// Close modal when clicking outside
+document.getElementById('certificateModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        const modal = bootstrap.Modal.getInstance(this);
+        modal.hide();
+    }
+});
+</script>
+
+<style>
+.certificate-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: rgba(67, 97, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .certificate-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    #certificateFrame, #certificateImage {
+        height: 400px;
+    }
+}
+</style>
+  
+  <!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="display-5 fw-bold text-center mb-5">Contact Me</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-5">
+                            <h3>Let's Connect!</h3>
+                            <p class="text-muted">Feel free to reach out for collaborations or just to say hello</p>
+                        </div>
+                        <div class="text-center mb-4">
+                            <a href="https://github.com/pythoxb0" target="_blank" class="btn btn-outline-primary mx-2"><i class="bi bi-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/sahilkumardata/" target="_blank" class="btn btn-outline-primary mx-2"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                            <a href="https://www.kaggle.com/pythoxb" target="_blank" class="btn btn-outline-info mx-2"><i class="bi bi-kaggle"></i> Kaggle</a>
+                            <a href="mailto:sahilkumar1851320@gmail.com" class="btn btn-outline-success mx-2"><i class="bi bi-envelope"></i> Email</a>
+                        </div>
+                        
+                        <!-- Contact Form with FormSubmit.co -->
+                        <form id="contact-form" action="https://formsubmit.co/sahilkumar1851320@gmail.com" method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Message from Portfolio - Sahil Kumar">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <!-- Redirect back to your portfolio after submission -->
+                            <input type="hidden" name="_next" value="https://pythoxb0.github.io/Portfolio/#contact">
+                            
+                            <!-- Optional: Add thank you message in URL -->
+                            <!-- <input type="hidden" name="_next" value="https://pythoxb0.github.io/Portfolio/#contact?message=success"> -->
+                            
+                            <div class="mb-3">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-4">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Toast Notification -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header bg-success text-white">
+            <strong class="me-auto">Success!</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Message sent successfully! I'll get back to you soon.
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+    
+    // Check if URL has success parameter (if using URL parameter method)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('message') && urlParams.get('message') === 'success') {
+        successToast.show();
+        
+        // Clear the URL parameter
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+    
+    // FormSubmit.co AJAX submission with custom handling
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Show loading state
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...';
+        submitBtn.disabled = true;
+        
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Submit to FormSubmit.co
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show success toast
+                successToast.show();
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Scroll to top of contact section
+                setTimeout(() => {
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            } else {
+                alert('There was an error sending your message. Please try again.');
+            }
+        })
+        .catch(error => {
+            alert('There was an error sending your message. Please try again.');
+            console.error('Form submission error:', error);
+        })
+        .finally(() => {
+            // Reset button
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        });
+    });
+});
+</script>
+
+<style>
+.btn-outline-info {
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-outline-info:hover {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+.form-control:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.25);
+}
+
+#successToast {
+    min-width: 300px;
+}
+
+.toast {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        margin-bottom: 10px;
+    }
+    
+    .form-control {
+        padding: 10px 12px;
+    }
+}
+</style>
+
+    <!-- Footer -->
+   
+    <footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                <h4 class="fw-bold mb-3">Sahil Kumar</h4>
+                <p class="text-light mb-2">
+                    <i class="bi bi-geo-alt me-2"></i>Delhi, India
+                </p>
+                <p class="text-light mb-0">
+                    <i class="bi bi-envelope me-2"></i>sahilkumar1851320@gmail.com
+                </p>
+            </div>
+            
+            <div class="col-md-6 text-center text-md-end">
+                <div class="social-links mb-4">
+                    <a href="https://github.com/pythoxb0" target="_blank" class="social-link text-white mx-2">
+                        <i class="bi bi-github fs-4"></i>
+                        <span class="d-block small mt-1">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sahilkumardata/" target="_blank" class="social-link text-white mx-2">
+                        <i class="bi bi-linkedin fs-4"></i>
+                        <span class="d-block small mt-1">LinkedIn</span>
+                    </a>
+                    <a href="mailto:sahilkumar1851320@gmail.com" class="social-link text-white mx-2">
+                        <i class="bi bi-envelope fs-4"></i>
+                        <span class="d-block small mt-1">Email</span>
+                    </a>
+                </div>
+                
+                <!-- Kaggle Profile Badge -->
+                <div class="kaggle-badge mt-3">
+                    <a href="https://www.kaggle.com/pythoxb" target="_blank" class="btn btn-kaggle">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/kaggle.svg" alt="Kaggle" width="20" height="20" class="me-2">
+                        <span class="fw-bold">Kaggle Expert</span>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="my-4 opacity-50">
+        
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0">
+                    &copy; 2025 Sahil Kumar. All rights reserved.
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0">
+                    <span class="text-light">
+                        <i class="fas fa-code text-primary me-1"></i> Built with passion
+                    </span>
+                    <span class="ms-3">
+                        <i class="fas fa-heart text-danger me-1"></i> Made in India
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
+<style>
+.social-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    color: #4361ee !important;
+}
+
+.btn-kaggle {
+    background: linear-gradient(135deg, #20beff, #0083b0);
+    color: white !important;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-kaggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(32, 190, 255, 0.3);
+    color: white;
+}
+
+.btn-kaggle img {
+    filter: brightness(0) invert(1);
+}
+
+.text-light {
+    color: #adb5bd !important;
+}
+
+hr {
+    border-color: #444;
+}
+
+@media (max-width: 768px) {
+    .social-link {
+        margin: 0 10px;
+    }
+    
+    .btn-kaggle {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="btn btn-primary">
+    <button id="back-to-top" class="btn btn-primary position-fixed bottom-0 end-0 m-3">
         <i class="bi bi-chevron-up"></i>
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check saved theme or system preference
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme');
+        
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+            themeIcon.className = 'bi bi-sun-fill';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            const html = document.documentElement;
+            const isDark = html.getAttribute('data-bs-theme') === 'dark';
+            
+            if (isDark) {
+                html.setAttribute('data-bs-theme', 'light');
+                themeIcon.className = 'bi bi-moon-fill';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-bs-theme', 'dark');
+                themeIcon.className = 'bi bi-sun-fill';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (replace with actual fetch/axios call)
+            setTimeout(() => {
+                form.submit();
+                submitBtn.innerHTML = 'Sent!';
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            }, 1000);
+        });
+    </script>
+    
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+        }
+
+        [data-bs-theme="dark"] {
+            --bs-body-bg: #121212;
+            --bs-body-color: #f8f9fa;
+            --bs-secondary-bg: #1e1e1e;
+            --bs-border-color: #2d2d2d;
+        }
+
+        [data-bs-theme="dark"] .bg-light {
+            background-color: #1a1a1a !important;
+        }
+
+        [data-bs-theme="dark"] .card {
+            background-color: #1e1e1e !important;
+            border-color: #2d2d2d !important;
+        }
+
+        [data-bs-theme="dark"] .text-muted {
+            color: #adb5bd !important;
+        }
+
+        [data-bs-theme="dark"] .badge.bg-light {
+            background-color: #2d2d2d !important;
+            color: #f8f9fa !important;
+        }
+
+        .icon-small {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(67, 97, 238, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-level {
+            display: flex;
+            gap: 4px;
+        }
+
+        .level-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #dee2e6;
+        }
+
+        .level-dot.active {
+            background-color: #4361ee;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+            border-radius: 12px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+        }
+
+        #back-to-top {
+            display: none;
+            z-index: 1000;
+        }
+
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </body>
 </html>
